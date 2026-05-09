@@ -1,14 +1,11 @@
 import { getUserName } from '../../services/userService';
-import { Card } from "react-bootstrap";
+import { Card } from 'react-bootstrap';
 import VoteButtons from '../Shared/VoteButtons';
 import './CommentList.css';
 
-export default function CommentList({
-  comments,
-  upvote
-}) {
+export default function CommentList({ comments, upvote }) {
   if (comments.length === 0) {
-    return <div>No comments yet. Be the first to comment!</div>
+    return <div>No comments yet. Be the first to comment!</div>;
   }
 
   const handleDownvote = () => {

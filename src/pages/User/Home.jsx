@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { fetchRecentThreads } from '../../services/threadService.js';
 import ThreadPage from './ThreadPage.jsx';
 import ThreadList from '../../components/ThreadList/ThreadList.jsx';
-import { Container, Card } from "react-bootstrap";
+import { Container, Card } from 'react-bootstrap';
 import './Home.css';
 
 export default function Home() {
@@ -14,7 +14,12 @@ export default function Home() {
   }, []);
 
   if (selectedThread) {
-    return <ThreadPage thread={selectedThread} goBack={() => setSelectedThread(null)} />;
+    return (
+      <ThreadPage
+        thread={selectedThread}
+        goBack={() => setSelectedThread(null)}
+      />
+    );
   }
 
   return (
@@ -23,10 +28,7 @@ export default function Home() {
         <h1 className="home-title mb-4 display-6 fw-semibold border-bottom pb-2">
           🧵 Recent Threads
         </h1>
-        <ThreadList
-          threads={recentThreads}
-          onSelect={setSelectedThread}
-        />
+        <ThreadList threads={recentThreads} onSelect={setSelectedThread} />
       </Card>
     </Container>
   );

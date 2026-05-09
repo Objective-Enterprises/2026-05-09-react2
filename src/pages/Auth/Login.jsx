@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { Container, Card, Form, Button } from "react-bootstrap";
+import { Container, Card, Form, Button } from 'react-bootstrap';
 import './Auth.css';
 
 function Login() {
   const [form, setForm] = useState({ email: '', password: '' });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Login Attempt:', form);
     setForm({ email: '', password: '' });
@@ -34,7 +34,9 @@ function Login() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingEmail" className="auth-form-label">Email</label>
+            <label htmlFor="floatingEmail" className="auth-form-label">
+              Email
+            </label>
           </Form.Floating>
 
           <Form.Floating className="mb-4">
@@ -48,7 +50,9 @@ function Login() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingPassword" className="auth-form-label">Password</label>
+            <label htmlFor="floatingPassword" className="auth-form-label">
+              Password
+            </label>
           </Form.Floating>
 
           <Button type="submit" variant="primary" className="auth-submit-btn">
@@ -58,7 +62,6 @@ function Login() {
         </Form>
       </Card>
     </Container>
-
   );
 }
 

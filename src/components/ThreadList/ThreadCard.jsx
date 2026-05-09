@@ -1,35 +1,32 @@
 import { getUserName } from '../../services/userService';
-import { Card, Button, Col, Row, Stack } from "react-bootstrap";
+import { Card, Button, Col, Row, Stack } from 'react-bootstrap';
 import VoteButtons from '../Shared/VoteButtons';
 import './ThreadCard.css';
 
-export default function ThreadCard({
-  thread,
-  goBack,
-  home,
-  onSelect
-}) {
+export default function ThreadCard({ thread, goBack, home, onSelect }) {
   const voteCount = thread.upvotedBy.length - thread.downvotedBy.length;
 
   const handleUpvote = async () => {
-    alert("Upvote clicked!");
+    alert('Upvote clicked!');
   };
 
   const handleDownvote = async () => {
-    alert("Downvote clicked!");
+    alert('Downvote clicked!');
   };
 
   return (
     <Card className="single-thread-card">
       <Card.Body>
-        {!home && <Button
-          onClick={goBack}
-          variant="link"
-          size="sm"
-          className="back-to-home-btn text-decoration-none"
-        >
-          <i className="bi bi-arrow-left me-2"></i>Back to Home
-        </Button>}
+        {!home && (
+          <Button
+            onClick={goBack}
+            variant="link"
+            size="sm"
+            className="back-to-home-btn text-decoration-none"
+          >
+            <i className="bi bi-arrow-left me-2"></i>Back to Home
+          </Button>
+        )}
 
         <Row className="g-3">
           {/* Voting UI */}
@@ -54,20 +51,26 @@ export default function ThreadCard({
               <div className="d-flex align-items-center gap-2">
                 <i className="bi bi-person-circle thread-meta-icon"></i>
                 <span>
-                  <strong className="thread-meta-author">{getUserName(thread.author)}</strong>
+                  <strong className="thread-meta-author">
+                    {getUserName(thread.author)}
+                  </strong>
                 </span>
               </div>
               <div className="d-flex align-items-center gap-2">
                 <i className="bi bi-bookmark thread-meta-icon"></i>
-                <span className="badge thread-meta-badge">r/{thread.subredditName}</span>
+                <span className="badge thread-meta-badge">
+                  r/{thread.subredditName}
+                </span>
               </div>
-              {home &&<Button
-                onClick={() => {
-                  onSelect(thread)
-                }}
-              >
-                View Comments
-              </Button>}
+              {home && (
+                <Button
+                  onClick={() => {
+                    onSelect(thread);
+                  }}
+                >
+                  View Comments
+                </Button>
+              )}
             </div>
           </Col>
         </Row>

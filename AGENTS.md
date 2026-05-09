@@ -35,8 +35,8 @@ Reddit-like forum app (threads, comments, voting). Built with React 19 + Vite.
    - Container/Row/Col for layout
 
 2. Prefer Bootstrap utility classes over custom CSS:
-   - Spacing: m-*, p-*, gap-*, mb-*, mt-*, etc.
-   - Layout: d-flex, justify-content-*, align-items-*, etc.
+   - Spacing: m-_, p-_, gap-_, mb-_, mt-\*, etc.
+   - Layout: d-flex, justify-content-_, align-items-_, etc.
    - Typography: fw-bold, text-muted, small
    - Borders: border, rounded, shadow-sm
    - Background: bg-light, bg-body-tertiary, etc.
@@ -52,4 +52,3 @@ Reddit-like forum app (threads, comments, voting). Built with React 19 + Vite.
    - Proper spacing rhythm (prefer gap-2, gap-3, mb-3)
    - Clear visual hierarchy and semantic structure
    - Accessiblility (a11y) aria-label, proper button types
-

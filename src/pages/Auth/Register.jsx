@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { Container, Card, Form, Button } from "react-bootstrap";
+import { Container, Card, Form, Button } from 'react-bootstrap';
 import './Auth.css';
 
 function Register() {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Register Attempt:', form);
     setForm({ name: '', email: '', password: '' });
@@ -34,7 +34,9 @@ function Register() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingName" className="auth-form-label">Name</label>
+            <label htmlFor="floatingName" className="auth-form-label">
+              Name
+            </label>
           </Form.Floating>
 
           <Form.Floating className="mb-4">
@@ -48,7 +50,9 @@ function Register() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingEmail" className="auth-form-label">Email</label>
+            <label htmlFor="floatingEmail" className="auth-form-label">
+              Email
+            </label>
           </Form.Floating>
 
           <Form.Floating className="mb-4">
@@ -62,7 +66,9 @@ function Register() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingPassword" className="auth-form-label">Password</label>
+            <label htmlFor="floatingPassword" className="auth-form-label">
+              Password
+            </label>
           </Form.Floating>
 
           <Button type="submit" variant="primary" className="auth-submit-btn">
