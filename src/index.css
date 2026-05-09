@@ -89,8 +89,10 @@ textarea.form-control {
 
 /* Badge overrides */
 .badge {
-  background-color: var(--hover-bg) !important;
-  color: var(--text-dark) !important;
+  background-color: var(--hover-bg);
+  color: var(--text-dark);
+  border-radius: 0 !important;
+  text-transform: lowercase;
 }
 
 /* Text color classes */
