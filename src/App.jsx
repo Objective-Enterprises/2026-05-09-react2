@@ -6,6 +6,7 @@ import Register from './pages/Auth/Register';
 import "./App.css"
 import Home from './pages/User/Home';
 import { Button } from 'react-bootstrap';
+import ForgotPassword from './pages/Auth/ForgotPassword';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('login');
@@ -33,9 +34,9 @@ function App() {
   return (
     <div className="app-layout">
 
-
       <Header onNavigate={setCurrentPage} darkMode={darkMode} onToggleDarkMode={toggleDarkMode} />
       <main className="main-center-content">
+        {/* <ForgotPassword /> */}
         {/* Auth Pages */}
         {/* <Login /> */}
         {/* <Register /> */}
