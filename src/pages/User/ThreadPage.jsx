@@ -7,6 +7,7 @@ import { Container, Card } from "react-bootstrap";
 import './ThreadPage.css';
 
 export default function ThreadPage({ thread, goBack }) {
+  console.log('thread', thread)
   const [threadComments, setThreadComments] = useState([]);
 
   useEffect(() => {
@@ -15,7 +16,10 @@ export default function ThreadPage({ thread, goBack }) {
 
   return (
     <Container className="thread-container">
-      {/* Your Code here  */}
+      <ThreadCard
+        thread={thread}
+        goBack={goBack}
+      />
     </Container>
   );
 }
