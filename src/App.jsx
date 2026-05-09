@@ -5,6 +5,7 @@ import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
 import "./App.css"
 import Home from './pages/User/Home';
+import { Button } from 'react-bootstrap';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('login');
@@ -17,7 +18,6 @@ function App() {
   useEffect(() => {
     // Apply dark mode to the document
     if (darkMode) {
-      setCurrentPage(p)
       document.documentElement.setAttribute('data-theme', 'dark');
     } else {
       document.documentElement.removeAttribute('data-theme');
@@ -32,9 +32,10 @@ function App() {
 
   return (
     <div className="app-layout">
+
+
       <Header onNavigate={setCurrentPage} darkMode={darkMode} onToggleDarkMode={toggleDarkMode} />
       <main className="main-center-content">
-        
         {/* Auth Pages */}
         {/* <Login /> */}
         {/* <Register /> */}
